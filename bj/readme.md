@@ -1,5 +1,13 @@
 # 문제풀이, 학습 노트
 
+## CompressCoordinate_18870.py
+
+2208??
+
+### Takeaways
+* bisect라는 게 있다
+* *라는 연산자가 컨테이너 타입의 데이터를 언패킹하는 데에 쓰일 수 있다
+
 ## RemoteController_1107.py
 
 220821  
