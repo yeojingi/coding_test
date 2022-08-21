@@ -22,7 +22,7 @@ prev = [a for a in ns]
 ns.append("")
 
 for d in range(1, 6):
-  cur = [a for a in prev]
+  cur = [*prev]
   for ele in prev:
     for a in ns:
       c = int(ele + a)
