@@ -1,5 +1,22 @@
 # 문제풀이, 학습 노트
 
+## SearchLabyrinth_2178.py
+
+220822   
+방문한 것 체크하기,  
+스택인지, 큐인지  
+이 정도 주의하면 될 것 같다
+
+## FindNumber_1920.py
+
+220821  
+bisect 패키지 쓰니까 확실히 편하다  
+
+빨리 풀려서 다행..  
+
+### Takeaways
+* bisect search의 종료 시점은 나에게 주어진 배열의 (시작 인덱스 = 종료 인덱스)
+
 ## CompressCoordinate_18870.py
 
 2208??
