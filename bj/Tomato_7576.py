@@ -2,24 +2,24 @@ from collections import deque
 import math
 
 
-# M, N = map(int, input().split(' '))
-# rows = [ list(map(int, input().split(' '))) for _ in range(N) ]
+M, N = map(int, input().split(' '))
+rows = [ list(map(int, input().split(' '))) for _ in range(N) ]
 
 di = [0, 1, 0, -1]
 dj = [1, 0, -1, 0]
 
-M = 1000
-N = 1000
-rows = [ [0] * M for _ in range(N)]
-for i in range(1, N-1, 2):
-  for j in range(1, M-1, 2):
-    # if ((j+1) // 2) % 2 == 0 and i == 0:
-    #   continue
-    # elif ((j+1) // 2) % 2 == 1 and i == N-1:
-    #   continue
-    rows[i][j] = 1
-# rows[0][0] = 1
-print('?')
+# M = 1000
+# N = 1000
+# rows = [ [0] * M for _ in range(N)]
+# for i in range(1, N-1, 2):
+#   for j in range(1, M-1, 2):
+#     # if ((j+1) // 2) % 2 == 0 and i == 0:
+#     #   continue
+#     # elif ((j+1) // 2) % 2 == 1 and i == N-1:
+#     #   continue
+#     rows[i][j] = 1
+# # rows[0][0] = 1
+# print('?')
 
 dp = [ [math.inf] * M for _ in range(N)]
 
@@ -62,8 +62,8 @@ while q:
         numGrounds += 1
       dp[ni][nj] = d+1
 
-print(*dp, sep="\n")
-print(maxDay, numGrounds, cal)
+# print(*dp, sep="\n")
+# print(maxDay, numGrounds, cal)
 if numGrounds < 0:
   print(-1)
 else:
