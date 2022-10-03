@@ -35,5 +35,3 @@ for iter in iters:
     minValue = val
 
 print(minValue)
-
-      
