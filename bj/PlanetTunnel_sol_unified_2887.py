@@ -53,34 +53,28 @@ while not Zds.empty():
   Zd = Zds.get()
   ds.put(Zd)
 
-def findParent(x):
-    if x != heads[x]:
-        heads[x] = findParent(heads[x])
-    return heads[x]
+def findParent(d):
+  global heads
 
-# def findParent(d):
-#   global heads
-
-#   while True:
-#     if heads[d] == d:
-#       return d
+  while True:
+    if heads[d] == d:
+      return d
     
-#     d = heads[d]
-  
+    d = heads[d]
 
-expense = 0
-while numEdges < N-1:
-  [d, f, t] = ds.get()
-  # print(d, f, t)
+# print(edges)
+# 크루스칼 진행
+parents = [i for i in range(N)]
+cnt,ans = N-1,0
+while cnt:
+    (w,a,b) = ds.get()
+    A = findParent(a)
+    B = findParent(b)
+    if A == B:
+        continue
+    heads[B] = A
+    cnt-=1
+    ans+=w
 
-  hf = findParent(f)
-  ht = findParent(t)
-
-  if hf != ht:
-    # print(numEdges, expense, '|', d, '|', f, t, '|', hf, ht, heads)
-    heads[ht] = hf
-    expense += d
-    numEdges += 1
-
-# print(heads)
-print(expense)
+# print(parents)
+print(ans)
